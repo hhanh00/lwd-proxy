@@ -1,0 +1,27 @@
+[package]
+name = "lwd-proxy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+thiserror = "1"
+tokio = { version = "1", features = [ "macros", "rt-multi-thread", "sync" ] }
+tokio-stream = "0"
+hex = "0"
+
+tonic = {version = "0.8", features = [ "prost", "prost-derive", "tls", "tls-roots" ] }
+tonic-reflection = "0.5"
+prost = "0.11"
+
+env_logger = "0.9"
+log = "0.4"
+figment = { version = "0.10", features = [ "env", "toml" ] }
+serde = { version = "1", features = [ "derive" ] }
+
+[dependencies.zcash_primitives]
+git = "https://github.com/hhanh00/librustzcash.git"
+rev = "466806932d21597eb4f89a449347fa1983dffb22"
+
+[build-dependencies]
+tonic-build = "0.8"

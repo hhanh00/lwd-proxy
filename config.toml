@@ -1,0 +1,5 @@
+upstream_lwd = "http://192.168.0.100:9067"
+bind_addr = "0.0.0.0:9069"
+max_outputs_actions = 50
+exclude_sapling = false
+exclude_orchard = true
